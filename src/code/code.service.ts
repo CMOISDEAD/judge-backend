@@ -1,8 +1,8 @@
 import path from 'path';
 import { Injectable } from '@nestjs/common';
 
-import { writeFile, tarFile, getFile } from 'src/utils/files';
 import docker from 'src/configs/docker';
+import { writeFile, tarFile, getFile } from 'src/utils/files';
 
 const CONTAINERS_PATH = path.join(process.cwd(), 'src', 'utils', 'containers');
 

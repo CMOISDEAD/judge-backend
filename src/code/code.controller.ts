@@ -4,7 +4,7 @@ import { Code, CodeOutput } from './interfaces/code.interface';
 
 @Controller('code')
 export class CodeController {
-  constructor(private codeService: CodeService) {}
+  constructor(private codeService: CodeService) { }
 
   @Post()
   async testCode(@Body() data: Code): Promise<CodeOutput> {
