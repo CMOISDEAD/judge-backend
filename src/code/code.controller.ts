@@ -1,10 +1,11 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { CodeService } from './code.service';
 import { Code, CodeOutput } from './interfaces/code.interface';
+import { Public } from 'src/auth/decorators/public.decorator';
 
 @Controller('code')
 export class CodeController {
-  constructor(private codeService: CodeService) { }
+  constructor(private codeService: CodeService) {}
 
   @Post()
   async testCode(@Body() data: Code): Promise<CodeOutput> {
